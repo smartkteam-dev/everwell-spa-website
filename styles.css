@@ -239,3 +239,30 @@ a { color: inherit; text-decoration: none; }
     grid-template-columns: 1fr;
   }
 }
+
+/* Homepage discovery copy: keep the mobile stack after desktop shared rules. */
+@media (max-width: 800px) {
+  .local-discovery {
+    display: block;
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+  .local-discovery > div:last-child {
+    margin-top: 32px;
+  }
+  .local-discovery h2 {
+    max-width: 12ch;
+    margin-top: 18px;
+    font-size: clamp(2.35rem, 10.5vw, 3.25rem);
+    line-height: 1;
+  }
+  .local-discovery h2 br {
+    display: none;
+  }
+  .local-discovery > div:last-child p {
+    max-width: 38rem;
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.72;
+  }
+}
