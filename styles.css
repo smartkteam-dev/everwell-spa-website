@@ -240,6 +240,49 @@ a { color: inherit; text-decoration: none; }
   }
 }
 
+/* Final mobile safeguard for shared two-column copy on every inner page. */
+@media (max-width: 1100px) {
+  .inner-page .service-copy,
+  .inner-page .faq-section {
+    display: block;
+    padding: 68px 7vw;
+  }
+  .inner-page .service-copy > div:last-child,
+  .inner-page .faq-list {
+    margin-top: 32px;
+  }
+  .inner-page .service-copy h2,
+  .inner-page .faq-section h2 {
+    max-width: 12ch;
+    margin-top: 18px;
+    font-size: clamp(2.35rem, 10.5vw, 3.25rem);
+    line-height: 1;
+  }
+  .inner-page .service-copy h2 br,
+  .inner-page .faq-section h2 br {
+    display: none;
+  }
+  .inner-page .service-copy > div:last-child p {
+    max-width: 38rem;
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.72;
+  }
+  .inner-page .facial-grid,
+  .inner-page .benefit-grid,
+  .inner-page .price-note-grid {
+    display: block;
+  }
+  .inner-page .facial-grid article,
+  .inner-page .facial-grid article:nth-child(2n) {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  .inner-page .skin-needs-content ul {
+    columns: 1;
+  }
+}
+
 /* Homepage discovery copy: keep the mobile stack after desktop shared rules. */
 @media (max-width: 800px) {
   .local-discovery {
