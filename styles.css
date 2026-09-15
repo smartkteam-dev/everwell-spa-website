@@ -41,3 +41,126 @@ a { color: inherit; text-decoration: none; }
 .price-hero .page-hero-image { background-image: url('https://static.wixstatic.com/media/11062b_ef638a1bfa2f4cfe912e440c74a0d75c~mv2.jpg/v1/fill/w_1800,h_1100,al_c,q_85,enc_avif,quality_auto/11062b_ef638a1bfa2f4cfe912e440c74a0d75c~mv2.jpg'); }.price-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; margin: 45px 0 65px 25%; align-items: end; }.price-intro h2 { font-size: clamp(3rem, 5vw, 5rem); }.price-intro p { max-width: 420px; color: var(--muted); font-size: 15px; margin: 0; }.standalone-prices .price-list { margin-top: 0; }.price-notes { display: grid; grid-template-columns: 1fr 2fr; gap: 5vw; padding-top: 110px; padding-bottom: 125px; background: var(--cream); }.price-notes h2 { margin-top: 27px; font-size: clamp(3rem, 5vw, 5rem); }.price-note-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2vw; border-top: 1px solid var(--line); }.price-note-grid article { border-bottom: 1px solid var(--line); padding: 22px 0 28px; }.price-note-grid h3 { font-size: 15px; margin: 0 0 12px; }.price-note-grid p { color: var(--muted); font-size: 13px; margin: 0; }
 .price-hero .page-hero-image { background-image: url('https://static.wixstatic.com/media/11062b_132ee88e47e44f83a93686dcce38251a~mv2.jpg/v1/fill/w_1800,h_1100,al_c,q_85,enc_avif,quality_auto/%E7%83%AD%E7%9F%B3%E6%8C%89%E6%91%A9%E8%AA%B2%E7%A8%8B.jpg'); }.price-notes > div:first-child img { display: block; width: 100%; max-width: 280px; aspect-ratio: 3 / 2; object-fit: cover; margin-top: 48px; }.price-note-grid article { min-height: 125px; }
 @media (max-width: 800px) { .page-hero, .detail-hero { min-height: 700px; height: 88vh; }.page-hero-content { margin: 0 8vw; padding-top: 50px; }.page-hero h1, .detail-hero h1 { font-size: clamp(3.4rem, 14vw, 5.5rem); }.page-hero-content > p:last-of-type { max-width: 320px; font-size: 14px; }.benefit-section, .service-menu, .local-massage, .price-section, .facial-intro, .skin-needs, .about-story, .welcome-section, .price-notes { padding-top: 85px; padding-bottom: 85px; }.benefit-grid, .price-list { margin-left: 0; }.benefit-grid { display: block; margin-top: 45px; }.benefit-grid article { padding-bottom: 35px; }.service-menu, .local-massage { display: block; }.service-menu h2 { margin: 32px 0 35px; }.service-links a { font-size: 19px; }.local-massage-topics { margin-top: 48px; }.local-massage-topics h3 { font-size: 23px; }.price-intro { display: block; margin: 43px 0 45px; }.price-intro p { margin-top: 28px; }.price-row { align-items: start; padding: 19px 0; }.price-row strong { font-size: 16px; }.price-row strong small { display: block; margin-top: 2px; }.price-notes { display: block; }.price-notes h2 { margin-bottom: 43px; }.price-note-grid { display: block; }.price-note-grid article { padding: 19px 0 24px; }.cta-band { display: block; padding: 75px 8vw; }.cta-band .button { margin-top: 30px; }.facial-intro, .skin-needs, .about-story { display: block; }.facial-intro-copy, .skin-needs-content, .about-copy { margin-top: 43px; }.facial-grid { display: block; padding: 0 8vw; }.facial-grid article, .facial-grid article:nth-child(2n) { padding-top: 0; padding-bottom: 50px; }.facial-grid article img { height: 430px; }.skin-needs-content ul { columns: 1; }.about-copy { display: block; }.about-copy h2 { margin-bottom: 35px; }.about-values { display: block; }.about-value-image { min-height: 400px; }.about-value-content { padding-top: 85px; padding-bottom: 85px; }.value-lines { margin-top: 45px; } }
+
+/* Mobile treatment detail pages */
+@media (max-width: 800px) {
+  :where(.service-detail, body:has(.faq-section)) .service-copy,
+  :where(.service-detail, body:has(.faq-section)) .faq-section,
+  :where(.service-detail, body:has(.faq-section)) .detail-benefits {
+    padding: 68px 7vw;
+  }
+  :where(.service-detail, body:has(.faq-section)) .service-copy + .service-copy,
+  :where(.service-detail, body:has(.faq-section)) .service-copy + .detail-benefits,
+  :where(.service-detail, body:has(.faq-section)) .detail-benefits + .service-copy {
+    border-top: 1px solid var(--line);
+  }
+  :where(.service-detail, body:has(.faq-section)) .service-copy > div:last-child,
+  :where(.service-detail, body:has(.faq-section)) .faq-list {
+    margin-top: 32px;
+  }
+  :where(.service-detail, body:has(.faq-section)) .service-copy h2,
+  :where(.service-detail, body:has(.faq-section)) .faq-section h2 {
+    max-width: 12ch;
+    margin-top: 18px;
+    font-size: clamp(2.35rem, 10.5vw, 3.25rem);
+    line-height: 1;
+  }
+  :where(.service-detail, body:has(.faq-section)) .service-copy h2 br,
+  :where(.service-detail, body:has(.faq-section)) .faq-section h2 br {
+    display: none;
+  }
+  :where(.service-detail, body:has(.faq-section)) .service-copy > div:last-child p {
+    max-width: 38rem;
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.72;
+  }
+  :where(.service-detail, body:has(.faq-section)) .detail-benefits .benefit-grid {
+    margin-top: 30px;
+  }
+  :where(.service-detail, body:has(.faq-section)) .detail-benefits .benefit-grid article {
+    padding: 20px 0 28px;
+  }
+  :where(.service-detail, body:has(.faq-section)) .detail-benefits .benefit-grid h2 {
+    margin: 14px 0 12px;
+    font-size: clamp(2rem, 9vw, 2.7rem);
+    line-height: 1.02;
+  }
+  :where(.service-detail, body:has(.faq-section)) .detail-benefits .benefit-grid h2 br {
+    display: none;
+  }
+  :where(.service-detail, body:has(.faq-section)) .faq-list details {
+    padding: 0;
+  }
+  :where(.service-detail, body:has(.faq-section)) .faq-list summary {
+    position: relative;
+    min-height: 58px;
+    padding: 17px 38px 17px 0;
+    font-size: 19px;
+    list-style: none;
+  }
+  :where(.service-detail, body:has(.faq-section)) .faq-list summary::-webkit-details-marker {
+    display: none;
+  }
+  :where(.service-detail, body:has(.faq-section)) .faq-list summary::after {
+    content: '+';
+    position: absolute;
+    top: 16px;
+    right: 2px;
+    color: var(--copper);
+    font: 400 24px/1 var(--sans);
+  }
+  :where(.service-detail, body:has(.faq-section)) .faq-list details[open] summary::after {
+    content: '\2212';
+  }
+  :where(.service-detail, body:has(.faq-section)) .faq-list p {
+    margin: 0;
+    padding: 0 38px 20px 0;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  :where(.service-detail, body:has(.faq-section)) .cta-band {
+    padding: 62px 7vw calc(62px + env(safe-area-inset-bottom));
+  }
+  :where(.service-detail, body:has(.faq-section)) .cta-band h2 {
+    max-width: 10ch;
+    margin-top: 18px;
+    font-size: clamp(2.65rem, 12vw, 3.5rem);
+    line-height: .98;
+  }
+  :where(.service-detail, body:has(.faq-section)) .cta-band .button {
+    width: 100%;
+    margin-top: 32px;
+    padding: 16px 18px;
+  }
+  :where(.service-detail, body:has(.faq-section)) .site-footer {
+    padding-right: 7vw;
+    padding-left: 7vw;
+  }
+  :where(.service-detail, body:has(.faq-section)) .site-footer p {
+    margin: 24px 0 28px;
+  }
+  :where(.service-detail, body:has(.faq-section)) .footer-right {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 20px;
+    border-top: 1px solid rgba(255,255,255,.16);
+  }
+  :where(.service-detail, body:has(.faq-section)) .footer-right a {
+    min-width: 0;
+    min-height: 48px;
+    border-bottom: 1px solid rgba(255,255,255,.16);
+    line-height: 1.35;
+  }
+  :where(.service-detail, body:has(.faq-section)) .copyright {
+    margin-top: 34px;
+    padding-top: 26px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 420px) {
+  :where(.service-detail, body:has(.faq-section)) .footer-right {
+    grid-template-columns: 1fr;
+  }
+}
