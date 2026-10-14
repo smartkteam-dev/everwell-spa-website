@@ -6,6 +6,19 @@ const massagePages = new Set([
   'pain-relief-massage.html',
 ]);
 
+const servicePages = new Set([
+  'massage-redmond.html',
+  'massage-bellevue.html',
+  'swedish-massage.html',
+  'deep-tissue-massage.html',
+  'pain-relief-massage.html',
+  'lymphatic-drainage-massage.html',
+  'facial.html',
+  'hydrating-facial-redmond.html',
+  'deep-cleansing-facial-redmond.html',
+  'anti-aging-facial-redmond.html',
+]);
+
 const isCurrent = (page) => currentPage === page ? ' aria-current="page"' : '';
 const siteNav = document.querySelector('.site-nav');
 const menuToggle = document.querySelector('.menu-toggle');
@@ -79,6 +92,22 @@ if (main) {
   skipLink.href = '#main-content';
   skipLink.textContent = 'Skip to main content';
   document.body.prepend(skipLink);
+}
+
+if (servicePages.has(currentPage)) {
+  document.querySelectorAll('.page-hero-content > .button, .cta-band > .button').forEach((bookingButton) => {
+    const actions = document.createElement('div');
+    actions.className = 'service-actions';
+
+    const callButton = document.createElement('a');
+    callButton.className = 'button button-call';
+    callButton.href = 'tel:+14253588868';
+    callButton.setAttribute('aria-label', 'Call Everwell Spa at 425-358-8868');
+    callButton.innerHTML = 'Call now <span aria-hidden="true">&#9742;</span>';
+
+    bookingButton.before(actions);
+    actions.append(bookingButton, callButton);
+  });
 }
 
 document.querySelectorAll('.brand-mark, .button span, .service-links b').forEach((element) => element.setAttribute('aria-hidden', 'true'));
